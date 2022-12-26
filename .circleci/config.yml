@@ -11,4 +11,11 @@ jobs:
       - image: cimg/node:14.13.0
     steps:
       - checkout
-      - run: node --version
+      - run:
+          name: Installing dependencies
+          command: npm i
+      - run:
+          name: Run Tests
+          command: npm run test
+
+# run command can have a name field and a command field.
